@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src:url(proxima_nova_reg.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul#employeeList {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0;
+    text-align: center;
+}
+
+ul#employeeList li {
+    float: left;
+    overflow: hidden;
+    width: 300px;
+    height: 211px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+ul#employeeList li img {
+    position: absolute;
+    left: 0;
+}
+
+ul#employeeList li figcaption {
+    width: 100%;
+    height: 211px;
+    background: #000; /*Fallback for browsers that don't support opacity, no need to use Modernizr here*/
+    background: rgba(0,0,0,.85);
+    position: absolute;
+	color: #4EC7E8;
+	text-align:left;
+    left: -300px; /*Hides the figcaption by default*/
+    /*left: 0;*/
+    z-index: 10; /*Make sure it's higher than the image*/
+}
+
+/*Just some basic text styles*/
+ul#employeeList li figcaption h2 {font-size: 18px; color: #4EC7E8; margin: 0; padding: 10px; text-transform: uppercase; font-family: 'Proxima Nova';}
+ul#employeeList li figcaption h3 {font-size: 16px; color: #4EC7E8; margin: 0; padding: 10px; font-family: 'Proxima Nova'; font-weight: normal; font-style: normal;}

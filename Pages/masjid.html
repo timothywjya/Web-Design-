@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Semarang Tourism - Masjid Agung Jawa Tengah</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<link href="../extension/themes/6/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="../extension/themes/6/mcVideoPlugin.js" type="text/javascript"></script>
+    <script src="../extension/themes/6/js-image-slider.js" type="text/javascript"></script>
+    <link href="../extension/generic.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script type="text/javascript" src="../js/waypoints.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.colorbox-min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/reset.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../css/colorbox.css">
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(function() {
+                var sections = $("section");
+                var navigation_links = $("nav a.nav-item");
+                sections.waypoint({
+                    handler: function(direction) {
+                        var active_section;
+                        active_section = $(this);
+                        if (direction === "up") active_section = active_section.prev();
+                        var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
+                        navigation_links.removeClass("selected");
+                        active_link.addClass("selected");
+                    }
+                })
+                navigation_links.click( function(event) {
+                		event.preventDefault();
+                		$.scrollTo($(this).attr("href"),{duration: 2000});
+                });
+            });
+            $('.list-link').colorbox({opacity:0.5});
+            $('.list-link').hover(function(){
+                $(this).siblings('.list-caption').slideDown(100);
+                $(this).siblings('.list-img').removeClass('grayscale');
+            },function(){
+                $(this).siblings('.list-caption').slideUp(100);
+                $(this).siblings('.list-img').addClass('grayscale');
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="../extension/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="../extension/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            $('.view').fancybox({
+                'padding' : 0,
+				'overlayColor' : '#000000',
+				'openEffect' : 'fade',
+				'closeEffect' : 'fade',
+				'scrolling' : 'no',
+				'closeBtn': true,
+				'closeClick': false,
+				'width' : 400,
+				'height' : 400,
+				'minWidth' : 400,
+				'minHeight' : 400,
+				'type' : 'iframe',
+				'autoScale' : false
+				
+            });
+        });
+		</script>
+
+    <script
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCb3S6YrrX9IEsidqfdJDNzT068-s7MOaw&sensor=false">
+        </script>
+
+    <script>
+        var myCenter=new google.maps.LatLng(-6.28662,106.811424);
+
+        function initialize()
+        {
+        var mapProp = {
+        center:myCenter,
+        zoom:12,
+        mapTypeId:google.maps.MapTypeId.ROAD
+        };
+
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        var marker=new google.maps.Marker({
+        position:myCenter,
+        });
+
+        marker.setMap(map);
+
+        var infowindow = new google.maps.InfoWindow({
+        content:"513 Solution"
+        });
+
+        infowindow.open(map,marker);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+	
+    <link rel="stylesheet" href="../js/slide.css">
+	<script src="../js/fancy-hover.js"></script>
+    <script src="../js/modernizr-2.6.2.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+    
+		<script> 
+            Modernizr.load({
+                test: Modernizr.canvas && !Modernizr.touch,
+                yep: 'js/fancy-hover.js',
+                complete: function () { fancyHover.init($('ul#employeeList')); }
+            });
+        </script>
+        <style>
+            /*figcaption is hidden by default to avoid flash of unstyled content, so we adjust to show by default in the following cases */
+            .no-canvas ul#employeeList li figcaption { bottom:0 !important; }
+            .touch ul#employeeList li figcaption { bottom:0 !important; }
+        </style>
+
+		<script type="text/javascript" src="../extension/jquery.bxslider.js"></script>
+		<script src="../js/extension.bxslider.min.js"></script>
+		<link rel="stylesheet" href="../extension/jquery.bxslider.css">
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('.slider1').bxSlider({
+				slideWidth: 300,
+				minSlides: 4,
+				maxSlides: 5,
+				slideMargin: 10
+			});
+		});
+		</script>
+</head>
+<body>
+    
+	<header>
+        <div class="container">
+            <a href="index.php" class="logo-small" title=""></a>
+			<div class="nav-container right">
+                <nav >
+                    <a href="../index.html">Home</a>
+                    <a href="#kontens" title="MasjidAgung">Masjid Agung</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <article>
+    
+    <section id="kontens">
+		<div class="container">
+			<div class="clear"></div>
+				<div class="title">
+					<h3><b>Masjid Agung Jawa Tengah</b></h3>
+				</div>
+			<div class="konten">
+				<span class="s1">
+						<img src="img/masjid1.jpg"/>
+						<p><br/>Masjid Agung Jawa Tengah merupakan salah satu masjid termegah di Indonesia. Masjid dengan arsitektur indah ini mulai dibangun pada tahun 2001 dan selesai pada tahun 2006. Kompleks masjid terdiri dari bangunan utama seluas 7.669 m2 dan halaman seluas 7.500 m2.  Masjid Agung Jawa Tengah terletak di jalan Gajah Raya, tepatnya di Desa Sambirejo, Kecamatan Gayamsari, Kota Semarang.
+						<br/><br/>Masjid yang mampu menampung jamaah tak kurang dari 15.000 ini diresmikan oleh Presiden Republik Indonesia, Susilo Bambang Yudhoyono, pada tahun 2006. Upacara peresmian ditandai dengan penandatanganan batu prasasti setinggi 3,2 m dan berat 7,8 ton yang terletak di depan masjid. Prasasti terbuat dari batu alam yang berasal dari lereng Gunung Merapi.
+						<br/><br/><img src="img/masjid2.jpg"/>
+						<br/><br/>Selain sebagai tempat ibadah, Masjid Agung Jawa Tengah juga merupakan obyek wisataterpadu pendidikan, religi, pusat pendidikan, dan pusat aktivitas syiar Islam. Dengan berkunjung ke masjid ini, pengunjung dapat melihat keunikan arsitektur masjid yang merupakan perpaduan antara arsitektur Jawa, Roma dan Arab.
+						<br/><br/>Arsitektur Jawa terlihat pada beberapa bagian, misalnya pada bagian dasar tiang masjid menggunakan motif batik seperti tumpal, untu walang, kawung, dan parang-parangan. Ciriarsitektur Timur Tengah (Arab) terliat pada dinding masjid dinding masjid yang berhiaskan kaligrafi. Selain itu, di halaman Masjid Agung Jawa Tengah terdapat 6 payung hidrolik raksasa yang dapat membuka dan menutup secara otomatis yang merupakan adopsi arsitektur bangunan Masjid Nabawi yang terdapat di Kota Madinah. Masjid ini juga sedikit dipengaruhi gaya arsitektur Roma. Gaya itu nampak pada desain interior dan lapisan warna yang melekat pada sudut-sudut bangunan.
+						<br/><br/><img src="img/masjid3.jpg"/>
+						<br/><br/>Keistimewaan lain masjid ini berupa Menara Asmaul Husna (Al Husna Tower) dengan ketinggian 99 m. Menara yang dapat dilihat dari radius 5 km ini terletak di pojok barat daya masjid. Menara tersebut melambangkan kebesaran dan kemahakuasaan Allah. Dipuncak menara dilengkapi teropong pandang. Dari tempat ini pengunjung dapat menikmati udara yang segar sambil melihat indahnya Kota Semarang dan kapal-kapal yang sedang berlalu-lalang di pelabuhan Tanjung Emas.
+						</p>
+				</span>
+			</div>
+			</div>
+    </section>
+	
+	<section id="foot2">
+	<div class="container">
+		<div class="contentkontak left">
+			<div class="descputih">
+				<p>Copyright &copy; 2013 DINHUBKOMINFO - Pemerintah Prov. Jawa Tengah. All rights reserved. Developed by : Sera Vika Eviana - 672018025</p>
+			</div>
+		</div>
+
+	</div>
+	</section>
+
+</body>
+
+</html>
